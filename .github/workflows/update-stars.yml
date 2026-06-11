@@ -1,0 +1,77 @@
+name: Update Stars
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Allow manual trigger from Actions tab
+
+jobs:
+  update-stars:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch and update star counts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Repos to track: short name → full owner/repo
+          declare -A REPOS
+          REPOS["opencode-hashline"]="izzzzzi/opencode-hashline"
+          REPOS["agent-assh"]="izzzzzi/agent-assh"
+          REPOS["agent-aget"]="izzzzzi/agent-aget"
+          REPOS["agent-asearch"]="izzzzzi/agent-asearch"
+          REPOS["izTeamSlots"]="izzzzzi/izTeamSlots"
+          REPOS["codewiki-mcp"]="izzzzzi/codewiki-mcp"
+          REPOS["opencode-gemini-business"]="izzzzzi/opencode-gemini-business"
+          REPOS["izTolkMcp"]="izzzzzi/izTolkMcp"
+          REPOS["pi-goal-pro"]="izzzzzi/pi-goal-pro"
+
+          UPDATED=false
+
+          for SHORT in "${!REPOS[@]}"; do
+            FULL="${REPOS[$SHORT]}"
+            STARS=$(gh api "repos/$FULL" --jq '.stargazers_count' 2>/dev/null)
+            if [ -z "$STARS" ] || [ "$STARS" = "null" ]; then
+              echo "⚠️  Failed to fetch stars for $FULL"
+              continue
+            fi
+            echo "⭐ $FULL → $STARS"
+
+            # Update star count in README tables
+            # Matches: | [repo-name](url) | ⭐OLD | ... → | [repo-name](url) | ⭐NEW | ...
+            python3 -c "
+import re, sys
+with open('README.md', 'r') as f:
+    content = f.read()
+pattern = r'(\[' + re.escape('$SHORT') + r'\]\([^)]+\) \| )⭐\d+( \|)'
+replacement = r'\1⭐$STARS\2'
+new_content = re.sub(pattern, replacement, content)
+if new_content != content:
+    with open('README.md', 'w') as f:
+        f.write(new_content)
+    print('  ✓ Updated $SHORT → $STARS stars')
+else:
+    print('  - $SHORT already $STARS or pattern not found')
+" || echo "  ⚠️  Python pattern failed for $SHORT"
+          done
+
+          if git diff --name-only | grep -q "README.md"; then
+            echo "UPDATED=true" >> "$GITHUB_ENV"
+          else
+            echo "UPDATED=false" >> "$GITHUB_ENV"
+          fi
+
+      - name: Commit updated star counts
+        if: env.UPDATED == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update repo star counts [skip ci]"
+          git push
