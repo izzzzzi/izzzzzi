@@ -38,6 +38,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
   <a href="https://github.com/izzzzzi/agent-assh"><img src="https://github-readme-stats.vercel.app/api/pin/?username=izzzzzi&repo=agent-assh&theme=radical&hide_border=true&bg_color=1A1B27&title_color=8B5CF6&text_color=CDD6F4&icon_color=8B5CF6" /></a>
   <a href="https://github.com/izzzzzi/agent-aget"><img src="https://github-readme-stats.vercel.app/api/pin/?username=izzzzzi&repo=agent-aget&theme=radical&hide_border=true&bg_color=1A1B27&title_color=8B5CF6&text_color=CDD6F4&icon_color=8B5CF6" /></a>
   <a href="https://github.com/izzzzzi/agent-asearch"><img src="https://github-readme-stats.vercel.app/api/pin/?username=izzzzzi&repo=agent-asearch&theme=radical&hide_border=true&bg_color=1A1B27&title_color=8B5CF6&text_color=CDD6F4&icon_color=8B5CF6" /></a>
+  <a href="https://github.com/izzzzzi/agent-aadb"><img src="https://github-readme-stats.vercel.app/api/pin/?username=izzzzzi&repo=agent-aadb&theme=radical&hide_border=true&bg_color=1A1B27&title_color=8B5CF6&text_color=CDD6F4&icon_color=8B5CF6" /></a>
 </p>
 
 | Project | Stars | Description |
@@ -45,6 +46,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 | [agent-assh](https://github.com/izzzzzi/agent-assh) | ⭐17 | SSH workflow helper for LLM agents — persistent tmux sessions, token-efficient output, safety guards |
 | [agent-aget](https://github.com/izzzzzi/agent-aget) | ⭐11 | Browser workflow CLI for LLM agents — stealth Chromium, snapshots, profile management |
 | [agent-asearch](https://github.com/izzzzzi/agent-asearch) | ⭐7 | Multi-source search CLI — 18 backends (web, HN, Reddit, GitHub, YouTube, Twitter + APIs) |
+| [agent-aadb](https://github.com/izzzzzi/agent-aadb) | ⭐0 | Android Debug Bridge CLI for LLM agents — screen observation, taps, gestures, ADB shell, logcat, device management |
 
 ### 🔌 MCP Servers (TypeScript)
 

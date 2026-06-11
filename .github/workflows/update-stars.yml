@@ -24,6 +24,7 @@ jobs:
             izzzzzi/agent-assh \
             izzzzzi/agent-aget \
             izzzzzi/agent-asearch \
+            izzzzzi/agent-aadb \
             izzzzzi/izTeamSlots \
             izzzzzi/codewiki-mcp \
             izzzzzi/opencode-gemini-business \
