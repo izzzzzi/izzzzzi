@@ -12,50 +12,43 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v4
-
-      - name: Fetch and update star counts
+      - name: Update star counts
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          declare -A REPOS
-          REPOS["opencode-hashline"]="izzzzzi/opencode-hashline"
-          REPOS["agent-assh"]="izzzzzi/agent-assh"
-          REPOS["agent-aget"]="izzzzzi/agent-aget"
-          REPOS["agent-asearch"]="izzzzzi/agent-asearch"
-          REPOS["izTeamSlots"]="izzzzzi/izTeamSlots"
-          REPOS["codewiki-mcp"]="izzzzzi/codewiki-mcp"
-          REPOS["opencode-gemini-business"]="izzzzzi/opencode-gemini-business"
-          REPOS["izTolkMcp"]="izzzzzi/izTolkMcp"
-          REPOS["pi-goal-pro"]="izzzzzi/pi-goal-pro"
+          echo "Fetching stars..."
+          for repo in \
+            izzzzzi/opencode-hashline \
+            izzzzzi/agent-assh \
+            izzzzzi/agent-aget \
+            izzzzzi/agent-asearch \
+            izzzzzi/izTeamSlots \
+            izzzzzi/codewiki-mcp \
+            izzzzzi/opencode-gemini-business \
+            izzzzzi/izTolkMcp \
+            izzzzzi/pi-goal-pro
+          do
+            stars=$(gh api "repos/$repo" --jq '.stargazers_count')
+            short="${repo#*/}"
+            echo "$short → $stars ⭐"
 
-          for SHORT in "${!REPOS[@]}"; do
-            FULL="${REPOS[$SHORT]}"
-            STARS=$(gh api "repos/$FULL" --jq '.stargazers_count' 2>/dev/null)
-            if [ -z "$STARS" ] || [ "$STARS" = "null" ]; then
-              echo "⚠️  $FULL — no stars"
-              continue
-            fi
-            echo "⭐ $FULL → $STARS"
-
-            python3 -c "
+            python3 <<PYEOF
 import re
 with open('README.md') as f:
     content = f.read()
-pattern = r'(\[' + re.escape('$SHORT') + r'\]\([^)]+\) \| )⭐\d+( \|)'
-replacement = r'\1⭐$STARS\2'
+pattern = r'(\[' + re.escape('$short') + r'\]\([^)]+\) \| )⭐\d+( \|)'
+replacement = r'\1⭐$stars\2'
 new_content = re.sub(pattern, replacement, content)
 if new_content != content:
     with open('README.md', 'w') as f:
         f.write(new_content)
-    print('  ✓ updated')
+    print('  ✓ $short updated')
 else:
-    print('  - already current')
-"
+    print('  - $short already current')
+PYEOF
           done
-
       - name: Commit if changed
         run: |
           if ! git diff --quiet README.md; then
@@ -65,5 +58,5 @@ else:
             git commit -m "chore: update repo star counts [skip ci]"
             git push
           else
-            echo "No changes to commit"
+            echo "No changes"
           fi
