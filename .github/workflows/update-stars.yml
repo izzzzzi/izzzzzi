@@ -1,24 +1,24 @@
 name: Update Stars
-
 on:
   schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
+    - cron: 0 6 * * *
+  workflow_dispatch: {}
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
-  update-stars:
+  update:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Update star counts
+      - name: Fetch and update star counts
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          echo "Fetching stars..."
+          set -e
           for repo in \
             izzzzzi/opencode-hashline \
             izzzzzi/agent-assh \
@@ -32,22 +32,8 @@ jobs:
           do
             stars=$(gh api "repos/$repo" --jq '.stargazers_count')
             short="${repo#*/}"
-            echo "$short → $stars ⭐"
-
-            python3 <<PYEOF
-import re
-with open('README.md') as f:
-    content = f.read()
-pattern = r'(\[' + re.escape('$short') + r'\]\([^)]+\) \| )⭐\d+( \|)'
-replacement = r'\1⭐$stars\2'
-new_content = re.sub(pattern, replacement, content)
-if new_content != content:
-    with open('README.md', 'w') as f:
-        f.write(new_content)
-    print('  ✓ $short updated')
-else:
-    print('  - $short already current')
-PYEOF
+            echo "$short → $stars"
+            sed -i "/$short/ s/⭐[0-9]*/⭐$stars/" README.md
           done
       - name: Commit if changed
         run: |
