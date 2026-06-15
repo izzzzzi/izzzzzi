@@ -43,8 +43,8 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [agent-assh](https://github.com/izzzzzi/agent-assh) | ⭐18 | SSH workflow helper for LLM agents — persistent tmux sessions, token-efficient output, safety guards |
-| [agent-aget](https://github.com/izzzzzi/agent-aget) | ⭐11 | Browser workflow CLI for LLM agents — stealth Chromium, snapshots, profile management |
+| [agent-assh](https://github.com/izzzzzi/agent-assh) | ⭐17 | SSH workflow helper for LLM agents — persistent tmux sessions, token-efficient output, safety guards |
+| [agent-aget](https://github.com/izzzzzi/agent-aget) | ⭐10 | Browser workflow CLI for LLM agents — stealth Chromium, snapshots, profile management |
 | [agent-asearch](https://github.com/izzzzzi/agent-asearch) | ⭐7 | Multi-source search CLI — 18 backends (web, HN, Reddit, GitHub, YouTube, Twitter + APIs) |
 | [agent-aadb](https://github.com/izzzzzi/agent-aadb) | ⭐0 | Android Debug Bridge CLI for LLM agents — screen observation, taps, gestures, ADB shell, logcat, device management |
 
