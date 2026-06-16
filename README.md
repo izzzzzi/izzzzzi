@@ -59,7 +59,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐33 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
+| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐34 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
 | [opencode-gemini-business](https://github.com/izzzzzi/opencode-gemini-business) | ⭐4 | Multi-account Gemini Business pool with intelligent rotation |
 
 ### ⛓️ TON Blockchain
@@ -74,7 +74,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 | Project | Stars | Description |
 |---------|:-----:|-------------|
 | [izTeamSlots](https://github.com/izzzzzi/izTeamSlots) | ⭐22 | ChatGPT Team slot management — automated invites, OAuth, Codex token rotation |
-| [pi-goal-pro](https://github.com/izzzzzi/pi-goal-pro) | ⭐1 | Persistent autonomous goals for Pi coding agent |
+| [pi-goal-pro](https://github.com/izzzzzi/pi-goal-pro) | ⭐2 | Persistent autonomous goals for Pi coding agent |
 
 ---
 
