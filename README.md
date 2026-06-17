@@ -73,7 +73,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [izTeamSlots](https://github.com/izzzzzi/izTeamSlots) | ⭐22 | ChatGPT Team slot management — automated invites, OAuth, Codex token rotation |
+| [izTeamSlots](https://github.com/izzzzzi/izTeamSlots) | ⭐23 | ChatGPT Team slot management — automated invites, OAuth, Codex token rotation |
 | [pi-goal-pro](https://github.com/izzzzzi/pi-goal-pro) | ⭐2 | Persistent autonomous goals for Pi coding agent |
 
 ---
