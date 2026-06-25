@@ -43,7 +43,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [agent-assh](https://github.com/izzzzzi/agent-assh) | ⭐18 | SSH workflow helper for LLM agents — persistent tmux sessions, token-efficient output, safety guards |
+| [agent-assh](https://github.com/izzzzzi/agent-assh) | ⭐19 | SSH workflow helper for LLM agents — persistent tmux sessions, token-efficient output, safety guards |
 | [agent-aget](https://github.com/izzzzzi/agent-aget) | ⭐10 | Browser workflow CLI for LLM agents — stealth Chromium, snapshots, profile management |
 | [agent-asearch](https://github.com/izzzzzi/agent-asearch) | ⭐7 | Multi-source search CLI — 18 backends (web, HN, Reddit, GitHub, YouTube, Twitter + APIs) |
 | [agent-aadb](https://github.com/izzzzzi/agent-aadb) | ⭐0 | Android Debug Bridge CLI for LLM agents — screen observation, taps, gestures, ADB shell, logcat, device management |
@@ -52,14 +52,14 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [codewiki-mcp](https://github.com/izzzzzi/codewiki-mcp) | ⭐9 | MCP server for codewiki.google — search, fetch docs, ask questions about any open-source repo |
+| [codewiki-mcp](https://github.com/izzzzzi/codewiki-mcp) | ⭐10 | MCP server for codewiki.google — search, fetch docs, ask questions about any open-source repo |
 | [izTolkMcp](https://github.com/izzzzzi/izTolkMcp) | ⭐1 | MCP server for TON Tolk compiler — compile, check, and deploy smart contracts from AI assistants |
 
 ### 🤖 OpenCode Plugins
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐34 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
+| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐35 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
 | [opencode-gemini-business](https://github.com/izzzzzi/opencode-gemini-business) | ⭐4 | Multi-account Gemini Business pool with intelligent rotation |
 
 ### ⛓️ TON Blockchain
