@@ -59,7 +59,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐35 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
+| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐36 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
 | [opencode-gemini-business](https://github.com/izzzzzi/opencode-gemini-business) | ⭐4 | Multi-account Gemini Business pool with intelligent rotation |
 
 ### ⛓️ TON Blockchain
