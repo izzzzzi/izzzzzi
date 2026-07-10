@@ -52,14 +52,14 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [codewiki-mcp](https://github.com/izzzzzi/codewiki-mcp) | ⭐12 | MCP server for codewiki.google — search, fetch docs, ask questions about any open-source repo |
+| [codewiki-mcp](https://github.com/izzzzzi/codewiki-mcp) | ⭐13 | MCP server for codewiki.google — search, fetch docs, ask questions about any open-source repo |
 | [izTolkMcp](https://github.com/izzzzzi/izTolkMcp) | ⭐2 | MCP server for TON Tolk compiler — compile, check, and deploy smart contracts from AI assistants |
 
 ### 🤖 OpenCode Plugins
 
 | Project | Stars | Description |
 |---------|:-----:|-------------|
-| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐37 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
+| [opencode-hashline](https://github.com/izzzzzi/opencode-hashline) | ⭐38 | Content-addressable line hashing for precise AI code editing — eliminates "string not found" errors |
 | [opencode-gemini-business](https://github.com/izzzzzi/opencode-gemini-business) | ⭐4 | Multi-account Gemini Business pool with intelligent rotation |
 
 ### ⛓️ TON Blockchain
