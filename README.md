@@ -53,7 +53,7 @@ Based in **Moscow** 🇷🇺, working remotely as a developer at SELFSEC. Open-s
 | Project | Stars | Description |
 |---------|:-----:|-------------|
 | [codewiki-mcp](https://github.com/izzzzzi/codewiki-mcp) | ⭐19 | MCP server for codewiki.google — search, fetch docs, ask questions about any open-source repo |
-| [izTolkMcp](https://github.com/izzzzzi/izTolkMcp) | ⭐2 | MCP server for TON Tolk compiler — compile, check, and deploy smart contracts from AI assistants |
+| [izTolkMcp](https://github.com/izzzzzi/izTolkMcp) | ⭐3 | MCP server for TON Tolk compiler — compile, check, and deploy smart contracts from AI assistants |
 
 ### 🤖 OpenCode Plugins
 
